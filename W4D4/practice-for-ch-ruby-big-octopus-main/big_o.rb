@@ -42,7 +42,7 @@ def slow_dance(direction, array)
 end
 
 def fast_dance(direction, array)
-    array.index(direction)
+    array[direction]
 end
 
 p dominant(['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 
