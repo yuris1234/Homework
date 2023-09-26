@@ -46,4 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_020625) do
   add_foreign_key "castings", "actors"
   add_foreign_key "castings", "movies"
   add_foreign_key "movies", "actors", column: "director_id"
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> refs/remotes/origin/main
