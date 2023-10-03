@@ -34,7 +34,7 @@ class User < ApplicationRecord
     end
 
     def is_password?(arg)
-
+        
     end
 
     def reset_session_token!
