@@ -27,3 +27,14 @@ function isPrime(number) {
     }
     return true
 }
+
+function sumOfNPrimes(n) {
+    var sum = 0
+    for (let i = 2, x = 0; x < n; i++) {
+        if (isPrime(i)) {
+            sum += i;
+            x++;
+        }
+    }
+    return sum;
+}
