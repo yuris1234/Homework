@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitForm = (val) => {
     val.preventDefault();
 
-    const submitInput = document.getElementById('favorite-input');
+    const submitInput = document.getElementById('.favorite-input');
     const input = submitInput.value;
     submitInput = '';
 
@@ -29,12 +29,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const li = document.createElement('li');
     li.textContent = input;
     ul.appendChild(li);
-  });
+  };
   const submitButton = document.querySelector(".favorite-submit");
-  submitButton.addEventListener("click", handl)
+  submitButton.addEventListener("click", submitForm);
 
   
   // adding new photos
+  const showPhotoForm = (val) => {
+    let photoForm = document.querySelector('.photo-form-container');
+    if (photoForm.className = ".photo-form-container") {
+      photoForm.className = "photo-form-container hidden";
+    } else {
+      photoForm.className = "photo-form-container";
+    }
+  }
+  const photoFormButton = document.querySelector('.photo-show-button');
+  photoFormButton.addEventListener("click", showPhotoForm);
+
+  const handlePhotoSubmit = (val) => {
+    val.preventDefault();
+
+    const photoUrlInput = document.querySelector('.photo-url-input');
+    const photoUrl = photoUrlInput.value;
+    const img = document.createElement('img');
+    img.src = photoUrl;
+
+    const list = document.getElementById('.dog-photos');
+    const li = document.createElement('li');
+    li.appendChild(img);
+    list.appendChild(li);
+  }
+  const photoSubmit = document.querySelector('.photo-url-submit');
+  photoSubmit.addEventListener('click', handlePhotoSubmit);
+
 
   
 });
